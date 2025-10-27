@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet"  href="mysheet.css">
+	<link rel="stylesheet" herf="">
+	<title>The Product</title>
+</head>
+<body>
+	
+
+<body >
+	<nav class="navbar">
+		<div class="nav-toggle" onclick="toggleNav()">
+			<span class="bar"></span>
+			<span class="bar"></span>
+			<span class="bar"></span>
+		</div>
+		<ul class="nav-menu">
+						<li><img src="apple.webp" width="50" height="50"></li>
+
+			<li><a href="index.html">Home</a></li>
+			<li><a href="TheProduct.html">Products</a></li>
+			<li><a href="ContactUs.html">Contact Us</a></li>
+			<li><a href="AboutUs.html">About Us</a></li>
+		</ul>
+	</nav>
+
+	<h1>List of Products</h1>
+
+	<hr/>
+	
+	<p> Here is a list of our Products that are avaliable to buy online </p>
+
+				<table>
+			 	<caption>Prices</caption>
+			 	<tr>
+			 		<th>Products</th>
+			 		<th>Memory</th>
+			 		<th>Price</th>
+			 	</tr>
+			 	<tr>
+			 		<td>iPhone 15 Pro (Titanum)</td>
+			 		<td>64GB</td>
+			 		<td>$999</td>
+			 	</tr>
+			 	<tr>
+			 		<td>iPhone 15 Pro<br>
+			 			<ul>
+			 			<li>Black</li>
+			 			<li>Silver</li>
+			 			<li>Rose Gold</li>
+			 		</ul>
+			 		<td>128GB</td>
+			 		<td>$1100</td>
+			 	
+
+			 	</tr>
+			 	<tr>
+			 		<td>iPhone 15 Pro Max<br>(Silver)</td>
+			 		<td>128GB</td>
+			 		<td>$1200</td>
+			 	</tr>
+			 	<tr>
+			 		<td>iPhone 15 Pro Max<br>(Silver)</td>
+			 		<td>512GB</td>
+			 		<td>$1350</td>
+			 	</tr>
+			</table>
+			 		<label for="Product" style="font-size: 175%"> Choose a Product: </label><select id="Product" name="Product">
+
+			 			<option value="iPhone 15 Pro (Titanum) 64GB">iPhone 15 Pro (Titanum) 64GB</option>
+			 			<option value="iPhone 15 Pro (Black) 128GB">iPhone 15 Pro (Black) 128GB</option>
+			 			<option value="iPhone 15 Pro (Silver) 128GB">iPhone 15 Pro (Silver) 128GB</option>
+			 			<option value="iPhone 15 Pro (Rose Gold) 128GB">iPhone 15 Pro (Rose Gold) 128GB</option>
+			 			<option value="iPhone 15 Pro Max (Silver) 128GB">iPhone 15 Pro Max (Silver) 128GB</option>
+			 			<option value="iPhone 15 Pro Max (Black) 512GB">iPhone 15 Pro Max (Black) 512GB</option>
+
+			 	</select>
+			<br>
+			 	<button type="button" onclick=" alert('Thanks for choosing and working with us')">Submit</button>
+				<script>
+			function toggleNav() {
+				const navMenu = document.querySelector('.nav-menu');
+				const navToggle = document.querySelector('.nav-toggle');
+				navMenu.classList.toggle('active');
+				navToggle.classList.toggle('active');
+			}
+		</script>
+			<div class="footer">
+			<p>Copyright &copy; 2024 Apple Shop. All rights reserved.</p>
+			<p>Designed by Apple Shop Team</p>
+			<p>Contact us:9663535321</p>
+		</div>	
+	
+			
+		
+</body>
+</html>

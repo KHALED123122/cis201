@@ -1,0 +1,257 @@
+body{
+
+    background-image:url(background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    color: white;
+    
+}
+form{
+   box-shadow: 20px 20px 50px red;
+   box-sizing: border-box;
+    width: 400px;
+    margin: auto;
+    text-align: left;
+    background-color: rgb(1, 58, 142);
+}
+p{
+    font-size: 150%;
+
+}
+table, th, td {
+  border: 5px solid rgb(0, 0, 0);
+  border-collapse: collapse;
+  text-align: center;
+    background-color: rgb(30, 113, 149);    
+    color: rgb(34, 174, 76);
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 130%;
+    max-inline-size: 200%;
+    box-shadow: 20px 20px 50px red;
+    box-sizing: border-box;
+}
+caption {
+  font-size: 150%;
+  font-weight: bold;
+  margin: 10px;
+}
+input{
+    width: 97%;
+    height: 30px;
+    font-size: 100%;
+    box-sizing: border-box;
+}
+/* Navigation styles */
+.navbar {
+    background-color: rgb(39, 44, 69);
+    padding: 1rem;
+    position: relative;
+}
+
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    transition: background-color 0.3s;
+}
+
+.nav-toggle:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.bar {
+    width: 24px;
+    height: 2px;
+    background-color: white;
+    margin: 3px 0;
+    transition: all 0.3s ease-in-out;
+    border-radius: 2px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.nav-menu {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+@media screen and (max-width: 768px) {
+    .nav-toggle {
+        display: flex;
+    }
+
+    .nav-menu {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .nav-toggle.active {
+        background: rgba(255, 255, 255, 0.2);
+    }
+
+    .nav-toggle.active .bar:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+        width: 28px;
+    }
+
+    .nav-toggle.active .bar:nth-child(2) {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+
+    .nav-toggle.active .bar:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+        width: 28px;
+    }
+}
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(10, 20, 40, 0.55);
+    backdrop-filter: blur(6px);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+}
+nav .nav-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0.4rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+nav li {
+    margin: 0;
+}
+nav a {
+    display: inline-block;
+    padding: 0.45rem 0.85rem;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 6px;
+    transition: background-color 160ms ease, transform 120ms ease, color 160ms ease;
+}
+nav a:hover,
+nav a:focus {
+    background: rgba(255,255,255,0.06);
+    transform: translateY(-2px);
+    outline: none;
+}
+nav a:active {
+    transform: translateY(0);
+}
+nav a:focus-visible {
+    box-shadow: 0 0 0 3px rgba(229, 6, 6, 0.12);
+}
+/* Responsive: stack links on small screens for touch targets */
+@media (max-width: 600px) {
+    nav .nav-inner {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    nav ul {
+        flex-direction: column;
+        gap: 0;
+    }
+    nav a {
+        padding: 0.9rem 1rem;
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid rgba(255,255,255,0.04);
+    }
+}
+.footer {
+    background-color: rgb(39, 44, 69);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 8px rgba(0,0,0,0.25);
+}
+button{
+    background-color: rgb(34, 174, 76);
+    color: white;
+    font-size: 120%;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  option{
+    font-size: 120%;
+    font-weight: bold;
+  background-color: blue;
+  color: white;
+outline-color: blue;  
+}
+
+/* Style the native select element to match blue theme.
+     Note: styling options is limited in some browsers (especially on Windows and mobile).
+     We provide a custom-looking select using background SVG for the arrow.
+*/
+select {
+        font-size: 80%;
+        font-weight: 600;
+        background-color: #0b66ff; /* vivid blue */
+        color: #fff;
+        padding: 8px 38px 8px 12px; /* space for custom arrow */
+        border: 2px solid rgba(255,255,255,0.12);
+        border-radius: 8px;
+        appearance: none; /* remove native arrow where supported */
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='white'><polygon points='0,0 16,0 8,10'/></svg>");
+        background-repeat: no-repeat;
+        background-position: right 10px center;
+        background-size: 12px 12px;
+        cursor: pointer;
+}
+
+/* Hover/focus to improve visibility */
+select:hover,
+select:focus {
+        outline: none;
+        box-shadow: 0 0 0 4px rgba(11,102,255,0.12);
+        border-color: #0a5be6;
+}
+
+/* Keep option readable; many browsers ignore option background styling, but some will honor it */
+select option {
+        background-color: #0b66ff;
+        color: #fff;
+}
